@@ -1,0 +1,95 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/asc/Projects/jellyfin-metacrawler/src/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Config	config.py	/^class Config:$/;"	c
+DRY_RUN	config.py	/^    DRY_RUN = os.getenv('DRY_RUN', 'false').lower() == 'true'$/;"	v	class:Config
+EXCLUDE_MUSIC	config.py	/^    EXCLUDE_MUSIC = os.getenv('EXCLUDE_MUSIC', 'true').lower() == 'true'$/;"	v	class:Config
+JELLYFIN_API_KEY	config.py	/^    JELLYFIN_API_KEY = os.getenv('JELLYFIN_API_KEY')$/;"	v	class:Config
+JELLYFIN_URL	config.py	/^    JELLYFIN_URL = os.getenv('JELLYFIN_URL', 'http:\/\/localhost:8096')$/;"	v	class:Config
+JellyfinClient	jellyfin_client.py	/^class JellyfinClient:$/;"	c
+MIN_CONFIDENCE_THRESHOLD	config.py	/^    MIN_CONFIDENCE_THRESHOLD = float(os.getenv('MIN_CONFIDENCE_THRESHOLD', '0.90'))$/;"	v	class:Config
+MetadataAnalyzer	metadata_analyzer.py	/^class MetadataAnalyzer:$/;"	c
+MetadataCrawler	crawler.py	/^class MetadataCrawler:$/;"	c
+MetadataUpdater	metadata_updater.py	/^class MetadataUpdater:$/;"	c
+MetadataValidator	metadata_validator.py	/^class MetadataValidator:$/;"	c
+PERPLEXITY_API_KEY	config.py	/^    PERPLEXITY_API_KEY = os.getenv('PERPLEXITY_API_KEY')$/;"	v	class:Config
+PERPLEXITY_USE_PRO	config.py	/^    PERPLEXITY_USE_PRO = os.getenv('PERPLEXITY_USE_PRO', 'false').lower() == 'true'$/;"	v	class:Config
+PerplexityClient	perplexity_client.py	/^class PerplexityClient:$/;"	c
+StateTracker	state_tracker.py	/^class StateTracker:$/;"	c
+TMDB_API_KEY	config.py	/^    TMDB_API_KEY = os.getenv('TMDB_API_KEY')$/;"	v	class:Config
+UPDATE_IMAGES	config.py	/^    UPDATE_IMAGES = os.getenv('UPDATE_IMAGES', 'false').lower() == 'true'$/;"	v	class:Config
+__init__	crawler.py	/^    def __init__(self, config: Config):$/;"	m	class:MetadataCrawler
+__init__	jellyfin_client.py	/^    def __init__(self, base_url: str, api_key: str):$/;"	m	class:JellyfinClient
+__init__	metadata_analyzer.py	/^    def __init__(self):$/;"	m	class:MetadataAnalyzer
+__init__	metadata_updater.py	/^    def __init__(self, tmdb_api_key: Optional[str] = None):$/;"	m	class:MetadataUpdater
+__init__	metadata_validator.py	/^    def __init__(self, tmdb_client):$/;"	m	class:MetadataValidator
+__init__	perplexity_client.py	/^    def __init__(self, api_key: str, use_pro: bool = False):$/;"	m	class:PerplexityClient
+__init__	state_tracker.py	/^    def __init__(self, state_file: str = ".crawler_state.json"):$/;"	m	class:StateTracker
+_apply_metadata_update	crawler.py	/^    def _apply_metadata_update(self, item_id: str, current_item: Dict, new_metadata: Dict) -> bo/;"	m	class:MetadataCrawler	typeref:typename:bool
+_build_identification_prompt	perplexity_client.py	/^    def _build_identification_prompt(self, filename: str, current_metadata: Dict, media_type: st/;"	m	class:PerplexityClient	typeref:typename:str
+_clean_filename	metadata_analyzer.py	/^    def _clean_filename(self, filename: str) -> str:$/;"	m	class:MetadataAnalyzer	typeref:typename:str
+_extract_and_clean_json	perplexity_client.py	/^    def _extract_and_clean_json(self, content: str) -> str:$/;"	m	class:PerplexityClient	typeref:typename:str
+_extract_show_name_from_episode	metadata_validator.py	/^    def _extract_show_name_from_episode(self, episode_name: str) -> str:$/;"	m	class:MetadataValidator	typeref:typename:str
+_extract_year	metadata_updater.py	/^    def _extract_year(self, date_string: str) -> Optional[int]:$/;"	m	class:MetadataUpdater	typeref:typename:Optional[int]
+_extract_year_from_filename	metadata_validator.py	/^    def _extract_year_from_filename(self, filename: str) -> Optional[int]:$/;"	m	class:MetadataValidator	typeref:typename:Optional[int]
+_fetch_and_cache_season	metadata_updater.py	/^    def _fetch_and_cache_season(self, cache_key: str, show_id: int, show_title: str, season_num:/;"	m	class:MetadataUpdater
+_fetch_and_cache_show_episodes	metadata_updater.py	/^    def _fetch_and_cache_show_episodes(self, show_name: str, year: Optional[int] = None) -> bool/;"	m	class:MetadataUpdater	typeref:typename:bool
+_fix_truncated_json	perplexity_client.py	/^    def _fix_truncated_json(self, json_str: str) -> str:$/;"	m	class:PerplexityClient	typeref:typename:str
+_get_user_id	jellyfin_client.py	/^    def _get_user_id(self):$/;"	m	class:JellyfinClient
+_looks_like_hash	metadata_validator.py	/^    def _looks_like_hash(self, text: str) -> bool:$/;"	m	class:MetadataValidator	typeref:typename:bool
+_normalize_metadata	perplexity_client.py	/^    def _normalize_metadata(self, metadata: Dict) -> Dict:$/;"	m	class:PerplexityClient	typeref:typename:Dict
+_parse_episode_filename	metadata_validator.py	/^    def _parse_episode_filename(self, filename: str) -> Optional[Dict]:$/;"	m	class:MetadataValidator	typeref:typename:Optional[Dict]
+_parse_perplexity_response	perplexity_client.py	/^    def _parse_perplexity_response(self, content: str) -> Dict:$/;"	m	class:PerplexityClient	typeref:typename:Dict
+_parse_tmdb_episode_response	metadata_updater.py	/^    def _parse_tmdb_episode_response(self, data: Dict, show_name: str, show_id: int) -> Dict:$/;"	m	class:MetadataUpdater	typeref:typename:Dict
+_parse_tmdb_response	metadata_updater.py	/^    def _parse_tmdb_response(self, data: Dict, media_type: str) -> Dict:$/;"	m	class:MetadataUpdater	typeref:typename:Dict
+_prepare_jellyfin_metadata	crawler.py	/^    def _prepare_jellyfin_metadata(self, metadata: Dict) -> Dict:$/;"	m	class:MetadataCrawler	typeref:typename:Dict
+_print_summary	crawler.py	/^    def _print_summary(self):$/;"	m	class:MetadataCrawler
+_process_item	crawler.py	/^    def _process_item(self, item: Dict):$/;"	m	class:MetadataCrawler
+_score_filename_match	metadata_analyzer.py	/^    def _score_filename_match(self, filename: str, name: str) -> float:$/;"	m	class:MetadataAnalyzer	typeref:typename:float
+_score_overview	metadata_analyzer.py	/^    def _score_overview(self, overview: str) -> float:$/;"	m	class:MetadataAnalyzer	typeref:typename:float
+_score_provider_ids	metadata_analyzer.py	/^    def _score_provider_ids(self, provider_ids: Dict) -> float:$/;"	m	class:MetadataAnalyzer	typeref:typename:float
+_score_year_match	metadata_analyzer.py	/^    def _score_year_match(self, filename: str, year: int) -> float:$/;"	m	class:MetadataAnalyzer	typeref:typename:float
+_try_tmdb_search	crawler.py	/^    def _try_tmdb_search(self, perplexity_metadata: Dict, item_type: str) -> Optional[Dict]:$/;"	m	class:MetadataCrawler	typeref:typename:Optional[Dict]
+analyze_file_characteristics	metadata_validator.py	/^    def analyze_file_characteristics(self, item: Dict) -> Dict:$/;"	m	class:MetadataValidator	typeref:typename:Dict
+analyze_item	metadata_analyzer.py	/^    def analyze_item(self, item: Dict) -> Tuple[float, Dict]:$/;"	m	class:MetadataAnalyzer	typeref:typename:Tuple[float,Dict]
+apply_metadata_to_item	metadata_updater.py	/^    def apply_metadata_to_item(self, current_item: Dict, new_metadata: Dict) -> Dict:$/;"	m	class:MetadataUpdater	typeref:typename:Dict
+clear	state_tracker.py	/^    def clear(self):$/;"	m	class:StateTracker
+extract_show_name_from_path	metadata_analyzer.py	/^    def extract_show_name_from_path(self, path: str) -> str:$/;"	m	class:MetadataAnalyzer	typeref:typename:str
+fetch_tmdb_metadata	metadata_updater.py	/^    def fetch_tmdb_metadata(self, tmdb_id: str, media_type: str) -> Optional[Dict]:$/;"	m	class:MetadataUpdater	typeref:typename:Optional[Dict]
+get_all_items	jellyfin_client.py	/^    def get_all_items(self, exclude_music: bool = True) -> List[Dict]:$/;"	m	class:JellyfinClient	typeref:typename:List[Dict]
+get_image_urls	metadata_updater.py	/^    def get_image_urls(self, metadata: Dict) -> Dict[str, str]:$/;"	m	class:MetadataUpdater	typeref:typename:Dict[str,str]
+get_item_by_id	jellyfin_client.py	/^    def get_item_by_id(self, item_id: str) -> Optional[Dict]:$/;"	m	class:JellyfinClient	typeref:typename:Optional[Dict]
+get_series_info	jellyfin_client.py	/^    def get_series_info(self, series_id: str) -> Optional[Dict]:$/;"	m	class:JellyfinClient	typeref:typename:Optional[Dict]
+identify_media	perplexity_client.py	/^    def identify_media(self, filename: str, current_metadata: Dict, media_type: str) -> Optional/;"	m	class:PerplexityClient	typeref:typename:Optional[Dict]
+is_processed	state_tracker.py	/^    def is_processed(self, item_id: str) -> bool:$/;"	m	class:StateTracker	typeref:typename:bool
+is_skipped	state_tracker.py	/^    def is_skipped(self, item_id: str) -> bool:$/;"	m	class:StateTracker	typeref:typename:bool
+load	state_tracker.py	/^    def load(self):$/;"	m	class:StateTracker
+logger	crawler.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	jellyfin_client.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	metadata_analyzer.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	metadata_updater.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	metadata_validator.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	perplexity_client.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	state_tracker.py	/^logger = logging.getLogger(__name__)$/;"	v
+mark_processed	state_tracker.py	/^    def mark_processed(self, item_id: str):$/;"	m	class:StateTracker
+mark_skipped	state_tracker.py	/^    def mark_skipped(self, item_id: str):$/;"	m	class:StateTracker
+needs_update	metadata_analyzer.py	/^    def needs_update(self, confidence: float, threshold: float) -> bool:$/;"	m	class:MetadataAnalyzer	typeref:typename:bool
+refresh_metadata	jellyfin_client.py	/^    def refresh_metadata(self, item_id: str) -> bool:$/;"	m	class:JellyfinClient	typeref:typename:bool
+run	crawler.py	/^    def run(self):$/;"	m	class:MetadataCrawler
+save	state_tracker.py	/^    def save(self):$/;"	m	class:StateTracker
+search_tmdb	metadata_updater.py	/^    def search_tmdb(self, title: str, year: Optional[int], media_type: str) -> Optional[Dict]:$/;"	m	class:MetadataUpdater	typeref:typename:Optional[Dict]
+search_tmdb_episode	metadata_updater.py	/^    def search_tmdb_episode(self, show_name: str, season: int, episode: int, year: Optional[int]/;"	m	class:MetadataUpdater	typeref:typename:Optional[Dict]
+should_use_perplexity	metadata_validator.py	/^    def should_use_perplexity($/;"	m	class:MetadataValidator	typeref:typename:bool
+update_item_images	jellyfin_client.py	/^    def update_item_images(self, item_id: str, image_url: str, image_type: str = 'Primary') -> b/;"	m	class:JellyfinClient	typeref:typename:bool
+update_item_metadata	jellyfin_client.py	/^    def update_item_metadata(self, item_id: str, metadata: Dict) -> bool:$/;"	m	class:JellyfinClient	typeref:typename:bool
+validate	config.py	/^    def validate(cls):$/;"	m	class:Config
+validate_with_tmdb	metadata_validator.py	/^    def validate_with_tmdb(self, item: Dict, filename: str, item_type: str) -> Tuple[float, Opti/;"	m	class:MetadataValidator	typeref:typename:Tuple[float,Optional[Dict]]
+verify_metadata_accuracy	perplexity_client.py	/^    def verify_metadata_accuracy(self, filename: str, metadata: Dict, media_type: str) -> float:$/;"	m	class:PerplexityClient	typeref:typename:float
